@@ -14,31 +14,33 @@ For compatiblity with AESCrypt, AESCrypt-Android has the same defaults namely:
 A blank IV is not the best security but the aim here is compatibility with AESCrypt implementations. See Adv method for providing your own IV.
 
 
-## Usage
+# Usage
 
-### Encrypt
+## Encrypt
 
-`	String password = "password";
+```java
+	String password = "password";
 	String message = "hello world";	
 	try {
     	String encryptedMsg = AESCrypt.encrypt(password, message);
     }catch (GeneralSecurityException e){
       //handle error
 	}
-`
+```
 
-### Decrypt
+## Decrypt
 
-`	String password = "password";
+```java
+	String password = "password";
     String encryptedMsg = "2B22cS3UC5s35WBihLBo8w==";
 	try {
         String messageAfterDecrypt = AESCrypt.decrypt(password, encryptedMsg);
     }catch (GeneralSecurityException e){
 	 //handle error - could be due to incorrect password or tampered encryptedMsg
     }
-`
+```
 
-### Advanced usage
+## Advanced usage
 
 It's possible to provide your own key, IV. 
 
@@ -50,7 +52,7 @@ It's possible to provide your own key, IV.
 **Note:** for flexiblity these 'adv' methods don't provide BASE64 encoding/decoding.
 
 
-### Debugging/Logging
+## Debugging/Logging
 
 To enable logging simple change switch on the logging flag as shown below.   
 
@@ -59,13 +61,13 @@ To enable logging simple change switch on the logging flag as shown below.
 *Remember to disble in Live, recommend the below snippet if possible*
 
 
-`if (BuildConfig.DEBUG) {
+```java
+if (BuildConfig.DEBUG) {
            AESCrypt.DEBUG_LOG_ENABLED = true;
-       }`
+       }
+```
        
        
-
-
 
 To be honest it's a strech to call this a library given it's only a single util class, but I created as went through a ton of pain working out the conpatible settings for AESCrypt. I hope this will save some one time in the future. 
 
