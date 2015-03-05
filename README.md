@@ -13,6 +13,17 @@ For compatiblity with AESCrypt, AESCrypt-Android has the same defaults namely:
 
 A blank IV is not the best security but the aim here is compatibility with AESCrypt implementations. See Adv method for providing your own IV.
 
+##Dependency
+
+[Download from Maven Central (.aar)](https://oss.sonatype.org/index.html#view-repositories;releases~browsestorage~/com/scottyab/aescrypt/0.0.1/aescrypt-0.0.1.aar)
+
+**or**
+
+```java
+	dependencies {
+    	compile 'com.scottyab:aescrypt:0.0.1'
+	}
+```
 
 # Usage
 
@@ -73,7 +84,7 @@ To be honest it's a strech to call this a library given it's only a single util 
 
 
 
-## Contributing
+#Contributing
 
 I welcome pull requests, issues and feedback.  
 
@@ -84,7 +95,7 @@ I welcome pull requests, issues and feedback.
 - Create new Pull Request
 
 
-#Licence
+##Licence
 
     Copyright (c) 2014 Scott Alexander-Bown
     
