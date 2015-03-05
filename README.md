@@ -49,7 +49,7 @@ It's possible to provide your own key, IV.
 `AESCrypt.decrypt(final SecretKeySpec key, final byte[] iv, final byte[] decodedCipherText)`
 
 
-**Note:** for flexiblity these 'adv' methods don't provide BASE64 encoding/decoding.
+**Note:** for flexibility these 'adv' methods don't provide BASE64 encoding/decoding.
 
 
 ## Debugging/Logging
@@ -58,7 +58,7 @@ To enable logging simple change switch on the logging flag as shown below.
 
 `AESCrypt.DEBUG_LOG_ENABLED = true;`
 
-*Remember to disble in Live, recommend the below snippet if possible*
+*Remember to disable in Live, recommend the below snippet if possible*
 
 
 ```java
