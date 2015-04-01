@@ -1,6 +1,8 @@
 AESCrypt-Android
 ================
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AESCrypt--Android-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1686)
+
 Simple API to perform AES encryption on Android with no dependancies. This is the Android counterpart to the [AESCrypt](https://github.com/Gurpartap/aescrypt) library Ruby and [AESCrypt-ObjC](http://github.com/Gurpartap/AESCrypt-ObjC) created by [Gurpartap Singh](https://github.com/Gurpartap).  
 
 For compatiblity with AESCrypt, AESCrypt-Android has the same defaults namely: 
