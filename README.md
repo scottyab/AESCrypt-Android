@@ -13,7 +13,7 @@ For compatiblity with AESCrypt, AESCrypt-Android has the same defaults namely:
  * Blank/Empty IV (default*)
 
 
-A blank IV is not the best security but the aim here is compatibility with AESCrypt implementations. See Adv method for providing your own IV.
+**A blank IV is not the best security but the aim here is compatibility with AESCrypt implementations. See Adv method for providing your own IV.** If you don't need to be compatable with [AESCrypt](https://github.com/Gurpartap/aescrypt) then look at  [java-aes-crypto](https://github.com/tozny/java-aes-crypto) it's API is just as simple and generates more secure keys. 
 
 ##Dependency
 
@@ -80,7 +80,7 @@ if (BuildConfig.DEBUG) {
        }
 ```
        
-       
+      
 
 To be honest it's a strech to call this a library given it's only a single util class, but I created as went through a ton of pain working out the conpatible settings for AESCrypt. I hope this will save some one time in the future. 
 
