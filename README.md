@@ -13,7 +13,7 @@ For compatiblity with AESCrypt, AESCrypt-Android has the same defaults namely:
  * Blank/Empty IV **(default*)**
 
 
-**\*Using the default blank IV [is vulnerable](http://security.stackexchange.com/questions/35210/encrypting-using-aes-256-do-i-need-iv). This has been left in for compatibility with AESCrypt implementations. See Adv method for providing your own IV.** If you don't need to be compatable with [AESCrypt](https://github.com/Gurpartap/aescrypt) then look at  [java-aes-crypto](https://github.com/tozny/java-aes-crypto) it's API is just as simple and generates more secure keys. 
+**\*Using CBC with the default blank IV [is vulnerable](http://security.stackexchange.com/a/35216/77065). This has been left in for compatibility with AESCrypt implementations. See Adv method for providing your own IV.** If you don't need to be compatable with [AESCrypt](https://github.com/Gurpartap/aescrypt) then look at  [java-aes-crypto](https://github.com/tozny/java-aes-crypto) it's API is just as simple and generates more secure keys. 
 
 ##Dependency
 
