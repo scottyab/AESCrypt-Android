@@ -3,28 +3,28 @@ AESCrypt-Android
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AESCrypt--Android-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1686)
 
-Simple API to perform AES encryption on Android with no dependancies. This is the Android counterpart to the [AESCrypt](https://github.com/Gurpartap/aescrypt) library Ruby and [AESCrypt-ObjC](http://github.com/Gurpartap/AESCrypt-ObjC) created by [Gurpartap Singh](https://github.com/Gurpartap).  
+Simple API to perform AES encryption on Android with no dependancies. This is the Android counterpart to the [AESCrypt](https://github.com/Gurpartap/aescrypt) library Ruby and [AESCrypt-ObjC](http://github.com/Gurpartap/AESCrypt-ObjC) created by [Gurpartap Singh](https://github.com/Gurpartap). It used the same *weak* :'( security defaults i.e Blank IV noted below.
 
 For compatiblity with AESCrypt, AESCrypt-Android has the same defaults namely: 
 
  * 256-bit AES key
  * CBC mode
  * PKCS7Padding
- * Blank/Empty IV **(default*)**
-
+ * Blank/Empty IV **(default*)** 
 
 **\*Using CBC with the default blank IV [is vulnerable](http://security.stackexchange.com/a/35216/77065). This has been left in for compatibility with AESCrypt implementations. See Adv method for providing your own IV.** If you don't need to be compatable with [AESCrypt](https://github.com/Gurpartap/aescrypt) then look at  [java-aes-crypto](https://github.com/tozny/java-aes-crypto) it's API is just as simple and generates more secure keys. 
 
-##Dependency
+
+## Dependency
 
 [Download from Maven Central (.aar)](https://oss.sonatype.org/index.html#view-repositories;releases~browsestorage~/com/scottyab/aescrypt/0.0.1/aescrypt-0.0.1.aar)
 
 **or**
 
 ```java
-	dependencies {
-    	compile 'com.scottyab:aescrypt:0.0.1'
-	}
+dependencies {
+  compile 'com.scottyab:aescrypt:0.0.1'
+}
 ```
 
 # Usage
@@ -32,35 +32,34 @@ For compatiblity with AESCrypt, AESCrypt-Android has the same defaults namely:
 ## Encrypt
 
 ```java
-	String password = "password";
-	String message = "hello world";	
-	try {
-    	String encryptedMsg = AESCrypt.encrypt(password, message);
-    }catch (GeneralSecurityException e){
-      //handle error
-	}
+String password = "password";
+String message = "hello world";	
+try {
+    String encryptedMsg = AESCrypt.encrypt(password, message);
+}catch (GeneralSecurityException e){
+    //handle error
+}
 ```
 
 ## Decrypt
 
 ```java
-	String password = "password";
-    String encryptedMsg = "2B22cS3UC5s35WBihLBo8w==";
-	try {
-        String messageAfterDecrypt = AESCrypt.decrypt(password, encryptedMsg);
-    }catch (GeneralSecurityException e){
-	 //handle error - could be due to incorrect password or tampered encryptedMsg
-    }
+String password = "password";
+String encryptedMsg = "2B22cS3UC5s35WBihLBo8w==";
+try {
+    String messageAfterDecrypt = AESCrypt.decrypt(password, encryptedMsg);
+}catch (GeneralSecurityException e){
+     //handle error - could be due to incorrect password or tampered encryptedMsg
+}
 ```
 
-## Advanced usage
+## Recommened ~Advanced~ usage
 
-It's possible to provide your own key, IV. 
+Please if you are going to use this library provide your own key, and use a different IV per message that you encrypt.. 
 
 `AESCrypt.encrypt(final SecretKeySpec key, final byte[] iv, final byte[] message)`
 
 `AESCrypt.decrypt(final SecretKeySpec key, final byte[] iv, final byte[] decodedCipherText)`
-
 
 **Note:** for flexibility these 'adv' methods don't provide BASE64 encoding/decoding.
 
@@ -76,8 +75,8 @@ To enable logging simple change switch on the logging flag as shown below.
 
 ```java
 if (BuildConfig.DEBUG) {
-           AESCrypt.DEBUG_LOG_ENABLED = true;
-       }
+    AESCrypt.DEBUG_LOG_ENABLED = true;
+}
 ```
        
       
@@ -86,7 +85,7 @@ To be honest it's a strech to call this a library given it's only a single util 
 
 
 
-#Contributing
+# Contributing
 
 I welcome pull requests, issues and feedback.  
 
@@ -97,7 +96,7 @@ I welcome pull requests, issues and feedback.
 - Create new Pull Request
 
 
-##Licence
+## Licence
 
     Copyright (c) 2014 Scott Alexander-Bown
     
