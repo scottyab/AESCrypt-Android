@@ -53,7 +53,7 @@ try {
 }
 ```
 
-## Recommened ~Advanced~ usage
+## Recommended ~Advanced~ usage
 
 Please if you are going to use this library provide your own key, and use a different IV per message that you encrypt.. 
 
